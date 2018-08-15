@@ -1,0 +1,21 @@
+{
+  "name": "assessment3",
+  "version": "1.0.0",
+  "description": "no fail",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongnangyanbily/assessment3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hongnangyanbily/assessment3/issues"
+  },
+  "homepage": "https://github.com/hongnangyanbily/assessment3#readme"
+}
