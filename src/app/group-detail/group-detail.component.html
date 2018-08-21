@@ -1,0 +1,18 @@
+<div *ngIf="group">
+  <h2>{{group.name | uppercase}}</h2>
+  <nav>
+    <a routerLink="/groupBoard">Enter</a>
+  </nav>
+  <div>
+    <span>id: </span>{{group.id}}</div>
+  <div>
+    <span>size: </span>{{group.size}}</div>
+  <div>
+    <span>location: </span>{{group.location}}</div>
+  <div>
+    <span>owner: </span>{{group.owner}}</div>
+  <div>
+    <span>description: </span>{{group.description}}</div>
+
+
+</div>
