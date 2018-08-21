@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../user";
 
 @Component({
   selector: "app-user",
@@ -7,7 +6,13 @@ import { User } from "../user";
   styleUrls: ["./user.component.css"]
 })
 export class UserComponent implements OnInit {
-  user: User = {
+  ngOnInit(): void {
+   
+  }
+  user: User;
+
+  constructor() {
+    this.user ={
     id: 101,
     firstName: "Alex",
     lastName: "Wu",
@@ -15,9 +20,15 @@ export class UserComponent implements OnInit {
     gender: "Male",
     groupJoint: "None",
     personalInterest: "Java"
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
+    }
+  }
+}
+interface User{
+    id: number;
+    firstName: string;
+    lastName: string;
+    age: number;
+    gender: string;
+    groupJoint: string;
+    personalInterest: string;
 }

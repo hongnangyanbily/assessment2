@@ -56,5 +56,13 @@ export const GROUPS: Group[] = [
     location: "Paris",
     owner: "Alex",
     description: "wow"
+  },
+  {
+    id: 7,
+    size: 10,
+    name: "Drink Up",
+    location: "Paris",
+    owner: "Alex",
+    description: "wow"
   }
 ];
