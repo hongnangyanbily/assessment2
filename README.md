@@ -1,5 +1,7 @@
 # Assessment3 #
 
+## This is the database of group.
+
 ## The develop environment ##
 * npm init
 * npm install --save-dev babel-cli babel-preset-env
