@@ -437,3 +437,34 @@ Open repository: /home/billy/Desktop/assessment3
 > git rev-list --left-right 1.0...refs/remotes/origin/1.0
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
+> git show :src/app/search/search.component.ts
+> git show :src/app/search/search.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/search/search.component.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
