@@ -1,3 +1,4 @@
+// module of user
 export class User {
   id: number;
   firstName: string;

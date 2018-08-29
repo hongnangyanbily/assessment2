@@ -1,3 +1,4 @@
+// sample data for test
 import { Group } from "./group";
 
 export const GROUPS: Group[] = [

@@ -5,11 +5,11 @@
 </form>
 <h1>Result:</h1>
 <ul style="text-align:center" *ngIf="searched">
-  <li *ngFor="let a of i">
-    {{a.id}}.{{a.name}}
-    <br/> Size: {{a.size}}
-    <br/> Description: {{a.description}}
-    <br/> Locations: {{a.location}}
+  <li *ngFor="let group of resultOfGroups">
+    {{group.id}}.{{group.name}}
+    <br/> Size: {{group.size}}
+    <br/> Description: {{group.description}}
+    <br/> Locations: {{group.location}}
     <br/>
     <br/>
     <br/>

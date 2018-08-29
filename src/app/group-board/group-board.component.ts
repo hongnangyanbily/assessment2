@@ -7,8 +7,10 @@ import { Group } from "../group";
   styleUrls: ["./group-board.component.css"]
 })
 export class GroupBoardComponent implements OnInit {
+  //Passing data from parent to child
   @Input()
   group: Group;
+
   constructor() {}
 
   ngOnInit() {}

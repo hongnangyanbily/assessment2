@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
   user: User;
 
   constructor() {
+    //build raw data
     this.user ={
     id: 101,
     firstName: "Alex",
@@ -24,6 +25,7 @@ export class UserComponent implements OnInit {
   }
 }
 interface User{
+    //define a new schema
     id: number;
     firstName: string;
     lastName: string;

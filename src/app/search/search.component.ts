@@ -9,9 +9,10 @@ import { Group } from "./../group";
 })
 export class SearchComponent implements OnInit {
   Groups: Group[];
-  i: Group[];
+  resultOfGroups: Group[];
   searched: boolean;
   constructor() {
+    //initialising....
     this.Groups = GROUPS;
     this.searched = false;
   }
@@ -20,32 +21,41 @@ export class SearchComponent implements OnInit {
 
   // match user input with group keyword
   // full name has to be typed and it is case-sensitive
-  findGroup(g) {
-    console.log(g);
-    this.i = [];
+  findGroup(keyword) {
+    this.resultOfGroups = [];
+    var str = keyword;
 
-    for (var a = 0; a < this.Groups.length; a++) {
-      if (this.Groups[a].owner == g) {
-        this.i.push(this.Groups[a]);
+    //searching group by key word
+    for (let a = 0; a < this.Groups.length; a++) {
+      if (this.Groups[a].owner.includes(str)) {
+        this.resultOfGroups.push(this.Groups[a]);
         this.searched = true;
+        console.log("Search group by owner");
       }
-      if (this.Groups[a].id == g) {
-        this.i.push(this.Groups[a]);
+      if (this.Groups[a].id == keyword) {
+        this.resultOfGroups.push(this.Groups[a]);
         this.searched = true;
+        console.log("Search group by id");
       }
-      if (this.Groups[a].name == g) {
-        this.i.push(this.Groups[a]);
+      if (this.Groups[a].name.includes(keyword)) {
+        this.resultOfGroups.push(this.Groups[a]);
         this.searched = true;
+        console.log("Search group by name");
       }
-      if (this.Groups[a].size == g) {
-        this.i.push(this.Groups[a]);
+      if (this.Groups[a].size == keyword) {
+        this.resultOfGroups.push(this.Groups[a]);
         this.searched = true;
+        console.log("Search group by size");
       }
-      if (this.Groups[a].location == g) {
-        this.i.push(this.Groups[a]);
+      if (this.Groups[a].location.includes(keyword)) {
+        this.resultOfGroups.push(this.Groups[a]);
         this.searched = true;
+        console.log("Search group by location");
       }
     }
-    console.log("1");
+    //Set messege for no matching
+    if (this.searched == false) {
+      window.alert("Not found!");
+    }
   }
 }

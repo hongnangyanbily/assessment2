@@ -7,6 +7,7 @@ import { Group } from "../group";
   styleUrls: ["./group-detail.component.css"]
 })
 export class GroupDetailComponent implements OnInit {
+  //Passing data from parent to child
   @Input()
   group: Group;
 

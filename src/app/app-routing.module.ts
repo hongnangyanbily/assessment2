@@ -3,11 +3,11 @@ import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 import { GroupsComponent } from "./groups/groups.component";
 import { UserComponent } from "./user/user.component";
-import { User } from "./user";
 import { SearchComponent } from "./search/search.component";
 import { GroupBoardComponent } from "./group-board/group-board.component";
 
 const routes: Routes = [
+
   { path: "", redirectTo: "groups", pathMatch: "full" }, // default route
 
   {

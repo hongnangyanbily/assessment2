@@ -1,3 +1,4 @@
+// build module of Group
 export class Group {
   id: number;
   size: number;

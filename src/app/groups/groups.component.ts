@@ -8,6 +8,7 @@ import { GROUPS } from "../mock-groups";
   styleUrls: ["./groups.component.css"]
 })
 export class GroupsComponent implements OnInit {
+  
   groups = GROUPS;
   selectedGroup: Group;
 
@@ -15,7 +16,9 @@ export class GroupsComponent implements OnInit {
 
   ngOnInit() {}
 
+  //Get the group that user selected.
   onSelect(group: Group): void {
+    //Pass the value of group to selectedGroup to operate.
     this.selectedGroup = group;
   }
 }
