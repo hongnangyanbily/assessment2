@@ -11,8 +11,8 @@
 * npm install mongoose
 * npm install cors
 
-## To run the database
-* make sure you install mongoodb here |https://www.mongodb.com/download-center?jmp=nav#community|
+## To run database
+* make sure you install mongoodb here https://www.mongodb.com/download-center?jmp=nav#community
 * npm run dev in project directory
 * open another terminal and type "mongod"
 * recommended tools -- robo 3T
