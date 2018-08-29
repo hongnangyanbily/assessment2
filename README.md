@@ -1,5 +1,5 @@
 # assessment3 #
-This 
+
 ## Set up the environment ##
 * npm init
 * npm install express --save
