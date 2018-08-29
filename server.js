@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // connect port of mongoose
 mongoose.connect(
-  "mongodb://localhost:27017/groups",
+  "mongodb://localhost:27017/database",
   { useNewUrlParser: true }
 );
 
