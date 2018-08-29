@@ -4,11 +4,7 @@
 
 ## The develop environment ##
 * npm init
-* npm install --save-dev babel-cli babel-preset-env
-* touch .babelrc
-* add {"presets": ["env"]}
-* npm install --save-dev babel-watch
-* add "dev": "babel-watch nameOfUrOwnFile.js" in the first bracket
+* npm install
 * npm install experss
 * npm install mongoose
 * npm install cors
