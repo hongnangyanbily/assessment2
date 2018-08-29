@@ -1,6 +1,5 @@
-# assessment3
-# Assignment3 #
-
+# assessment3 #
+This 
 ## Set up the environment ##
 * npm init
 * npm install express --save
@@ -10,13 +9,14 @@
 ## Version Link ##
 | Version      | Short description |
 | ------------- |:-------------:| 
-| [V1.0](https://github.com/hongnangyanbily/assessment3/tree/1.0)     | The Angular mock for week 5 lab|
-|[V2.0](https://github.com/hongnangyanbily/assessment3/tree/2.0)|The group database for week 6 lab|
+|[V1.0](https://github.com/hongnangyanbily/assessment3/tree/1.0)     | The Angular mock for week 5 lab|
+|[V2.0](https://github.com/hongnangyanbily/assessment3/tree/2.0)| The group database for week 6 lab|
 |[V3.0](https://github.com/hongnangyanbily/assessment3/tree/3.0)| The user databasae for week 6 lab|
-
+*note* : ***There are two different database built for week 6 lab***
 ## Code Principle
 ### This is the principle our group agree to implement while developing this project.
 ### The principles include code quality, design and group work.
+### All principles are figured out by our group together.
 
 1.  Always assign meaning names and follow the name format, no matter components, files or objects. The reason doing so is for better understanding and further code checking.
 
