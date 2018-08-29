@@ -2,9 +2,24 @@
 
 ## The develop environment ##
 * npm init
-* npm install express --save
-* npm install mongoose --save
-* npm install body-parser --save
+* npm install --save-dev babel-cli babel-preset-env
+* touch .babelrc
+* add {"presets": ["env"]}
+* npm install --save-dev babel-watch
+* add "dev": "babel-watch nameOfUrOwnFile.js" in the first bracket
+* npm install experss
+* npm install mongoose
+* npm install cors
+
+## To run the database
+* make sure you install mongoodb here |https://www.mongodb.com/download-center?jmp=nav#community|
+* npm run dev in project directory
+* open another terminal and type "mongod"
+* recommended tools -- robo 3T
+* add new connection
+* right click connection -> create database -> open database - collection -> create collection -> insert document
+* to test, open browser and type localhost:4000/groups (or other port you define), input the url
+* recommened using Postman to try CRUD methods
 
 ## Version Link ##
 | Version      | Short description |
