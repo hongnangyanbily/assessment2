@@ -1,0 +1,91 @@
+const express = require("express");
+const app = express();
+const port = 3000;
+const bodyParser = require('body-parser');
+User =require('./model/user');
+var currentUser;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost:27017/simpleDB");
+
+
+
+//routing part
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/view/index.html");
+});
+
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + "/view/register.html");
+});
+
+
+app.get('/login',function(req,res){
+    res.sendFile(__dirname + "/view/login.html");
+});
+
+// Method part
+
+
+// add a new user
+app.post('/addUser', (req, res) => {
+    let newUser = new User(req.body);
+    User.addUser(newUser,function (err,newUesr) {
+        if(err){
+            throw err;
+        }
+        res.json(newUser);
+    });
+    currentUser=newUser;
+    console.log('successfully add a new user');
+});
+
+//get all users
+app.get('/showAllUsers', (req, res) => {
+    User.getAllUsers(function (err,users) {
+        if(err){
+            throw err;
+        }
+        res.json(users);
+
+    });
+
+    console.log('successfully get all users');
+});
+
+//delete current user
+app.get('/delete',(req,res)=>{
+    if(currentUser!=null) {
+        User.delete(currentUser,function (err,user) {
+            if(err){
+                throw err;
+            }
+            res.send('Successfully delete your account')
+
+        })
+    }
+    else{
+        res.send('you do not login or register  yet');
+    }
+});
+//login in the user account
+// app.post('/loginUser',(req, res) => {
+//     let loginUser = new User(req.body);
+//     User.login(loginUser,function (err,loginUser) {
+//         if(err){
+//             console.log(err);
+//             throw err;
+//         }
+//         res.json(loginUser);
+//         res.send('login successfully');
+//         console.log('login successfully');
+//     });
+// });
+app.listen(port, () => {
+    console.log("Server listening on port " + port);
+});
+
