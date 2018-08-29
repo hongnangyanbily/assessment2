@@ -1,4 +1,3 @@
-# assessment3 
 # Assessment3 #
 
 ## The develop environment ##
@@ -19,10 +18,12 @@ user{
         }
 ```
 To make sure the draft application is available,
- * need to connect the link ***mongodb://localhost:27017/simpleDB***
- * create a database named ***simpleDB***
+ * need to connect the link ***mongodb://localhost:27017/database***
+ * create a database named ***database***
  * create a collection named ***users***
  * insert a document following the JSON structure above
+ 
+ **To better collaborate, we share the name value ***
 
 ## Version Link ##
 | Version      | Short description |
