@@ -1,6 +1,7 @@
 # Assessment3 #
 
 ## The develop environment ##
+Need to install nodejs and mongodb
 * npm init
 * npm install 
 
