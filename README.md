@@ -23,7 +23,7 @@ To make sure the draft application is available,
  * create a collection named ***users***
  * insert a document following the JSON structure above
  
- **To better collaborate, we share the name value ***
+ **To better collaborate, we are sharing the name value**
 
 ## Version Link ##
 | Version      | Short description |
