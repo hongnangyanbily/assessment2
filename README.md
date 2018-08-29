@@ -25,7 +25,7 @@
 |[V1.0](https://github.com/hongnangyanbily/assessment3/tree/1.0)| The Angular mockup for week 5 lab|
 |[V2.0](https://github.com/hongnangyanbily/assessment3/tree/2.0)| The Group database for week 6 lab|
 |[V3.0](https://github.com/hongnangyanbily/assessment3/tree/3.0)| The User databasae for week 6 lab|
-***note : There are two different database built for week 6 lab***
+***note : There are two different databases built for week 6 lab***
 
 ## Code Principle
 ### This is the principle our group agree to implement while developing this project.
