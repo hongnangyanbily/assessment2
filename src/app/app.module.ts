@@ -6,9 +6,9 @@ import { AppComponent } from "./app.component";
 import { GroupsComponent } from "./groups/groups.component";
 import { GroupDetailComponent } from "./group-detail/group-detail.component";
 import { UserComponent } from "./user/user.component";
-import { AppRoutingModule } from './/app-routing.module';
-import { SearchComponent } from './search/search.component';
-import { GroupBoardComponent } from './group-board/group-board.component';
+import { AppRoutingModule } from ".//app-routing.module";
+import { SearchComponent } from "./search/search.component";
+import { GroupBoardComponent } from "./group-board/group-board.component";
 
 @NgModule({
   declarations: [

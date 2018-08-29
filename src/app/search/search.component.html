@@ -1,18 +1,21 @@
 <br>
 <br>
-<form  style="text-align: center" (submit)="findGroup(input.value)">
-  <input type="text" placeholder="Enter group keyword" 
-  #input/>
+<form style="text-align: center" (submit)="findGroup(input.value)">
+  <input type="text" placeholder="Enter group keyword" #input/>
 </form>
 <h1>Result:</h1>
-<ul style="text-align:center" *ngIf="searched" >
+<ul style="text-align:center" *ngIf="searched">
   <li *ngFor="let a of i">
-    {{a.id}}.{{a.name}}<br/>
-    Size: {{a.size}}<br/>
-    Description: {{a.description}}<br/>
-    Locations: {{a.location}}<br/><br/><br/>
-    
+    {{a.id}}.{{a.name}}
+    <br/> Size: {{a.size}}
+    <br/> Description: {{a.description}}
+    <br/> Locations: {{a.location}}
+    <br/>
+    <br/>
+    <br/>
+
   </li>
+
 </ul>
 <br>
 <br>
