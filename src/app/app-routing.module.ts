@@ -5,10 +5,16 @@ import { GroupsComponent } from "./groups/groups.component";
 import { UserComponent } from "./user/user.component";
 import { SearchComponent } from "./search/search.component";
 import { GroupBoardComponent } from "./group-board/group-board.component";
+import { LoginComponent } from "./login/login.component"
 
 const routes: Routes = [
 
-  { path: "", redirectTo: "groups", pathMatch: "full" }, // default route
+  { path: "", redirectTo: "login", pathMatch: "full" }, // default route
+  
+  {
+    path:"login",
+    component:LoginComponent
+  },
 
   {
     path: "groups",

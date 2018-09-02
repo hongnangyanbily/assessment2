@@ -9,6 +9,7 @@ import { UserComponent } from "./user/user.component";
 import { AppRoutingModule } from ".//app-routing.module";
 import { SearchComponent } from "./search/search.component";
 import { GroupBoardComponent } from "./group-board/group-board.component";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GroupBoardComponent } from "./group-board/group-board.component";
     GroupDetailComponent,
     UserComponent,
     SearchComponent,
-    GroupBoardComponent
+    GroupBoardComponent,
+    LoginComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
