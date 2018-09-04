@@ -1,8 +1,8 @@
-<form style="text-align: center">
+<form style="text-align: center" (submit)="log($event)">
   <label>Username:</label>
-  <input type="text"><br/>
+  <input type="text" placeholder="Username" id="username" #user.username><br/>
   <label>Password:</label>
-  <input type="password"><br/>
-  <button type="submit">Login</button> &nbsp;
+  <input type="password" placeholder="Password" id="password" #user.password><br/>
+  <input type="submit" value="Login"> &nbsp;
   <button>Register</button>
 </form>
