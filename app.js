@@ -8,6 +8,8 @@ var database;
 var users;
 var url = "mongodb://localhost:27017/database";
 
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,40 +36,51 @@ app.get('/login',function(req,res){
     res.sendFile(__dirname + "/view/login.html");
 });
 
-app.post('/addUser', (req, res) => {
-    let newUser = { username: req.body.username, password: req.body.password };
-    users.insertOne(newUser, function(err, res) {
+app.post('/addUser', (req, response) => {
+
+    bcrypt.hash(req.body.password, saltRounds, function (err,   hash) {
+        req.body.password = hash;
+            let newUser = { username: req.body.username, password: req.body.password };
+         users.insertOne(newUser, function(err, res) {
         if (err) throw err;
-        console.log("1 document inserted");
 
     });
-    res.send('save');
+        });
+    response.send('save');
+
+
 });
 
-app.post('/addUser', (req, res) => {
-    let newUser = { username: req.body.username, password: req.body.password };
-    users.insertOne(newUser, function(err, res) {
-        if (err) throw err;
-        console.log("1 document inserted");
 
-    });
-    res.send('save');
-});
 
-app.post('/loginUser',(req, res) => {
-    let newUser = { username: req.body.username, password: req.body.password };
-    users.findOne({}, function(err, result) {
-        if(err) throw err;
+app.post('/loginUser',(req, response) => {
 
-        if(result.username===req.body.username){
-           if(result.password===req.body.password){
-        res.json(result);
-        }else
-           {res.send('wrong password')}
-        }else{
-            res.send('no that account')
+    users.findOne(
+        {
+        username:req.body.username
         }
-    });
+    ).then( function (user) {
+            if(user!=null) {
+                bcrypt.compare(req.body.password, user.password, function (err, result) {
+
+                    if (result == true) {
+                        response.send('login');
+                    }
+                    else {
+                        response.send('invalid input');
+                        response.redirect('/');
+                    }
+                });
+            }});
+
+
+
+
+
+
+
 
 });
+
+
 app.listen(port, () => console.log('Example app listening on port 3000!'))
