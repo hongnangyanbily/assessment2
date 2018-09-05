@@ -1,16 +1,19 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import "rxjs/add/operator/catch";
+import { Observable } from "rxjs";
+import "rxjs/add/observable/throw";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class LoginServiceService {
-  url = 'http://localhost:3000';
-  constructor(private http: HttpClient) { }
+  url = "http://localhost:3000";
+  constructor(private http: HttpClient) {}
   usrLogin(user) {
-    return this.http.post(`${this.url}/loginUser`, user).subscribe(data => {
-      console.log(data);
-    });
+    return this.http.post(`${this.url}/loginUser`, user).catch(this.errHandle);
+  }
+  errHandle(error: HttpErrorResponse) {
+    return Observable.throw(error.message || "Please check your input");
   }
 }

@@ -21,6 +21,11 @@
             "label": "Ctrl+Shift+T",
             "isNative": true
         },
+        "workbench.action.openRecent": {
+            "id": "workbench.action.openRecent",
+            "label": "Ctrl+R",
+            "isNative": true
+        },
         "workbench.action.files.save": {
             "id": "workbench.action.files.save",
             "label": "Ctrl+S",
@@ -457,8 +462,64 @@
     "pickerWorkingDir": "/home/billy/Desktop",
     "openedPathsList": {
         "workspaces2": [
+            "file:///home/billy/Desktop/database",
             "file:///home/billy/Desktop/assessment3"
         ],
         "files": []
+    },
+    "windowsState": {
+        "openedWindows": [
+            {
+                "folderUri": {
+                    "$mid": 1,
+                    "fsPath": "/home/billy/Desktop/assessment3",
+                    "external": "file:///home/billy/Desktop/assessment3",
+                    "path": "/home/billy/Desktop/assessment3",
+                    "scheme": "file"
+                },
+                "backupPath": "/home/billy/Desktop/assessment3/~/.vscode-root/Backups/9bb987cf0b56de9da2e86f8ec9ea1452",
+                "uiState": {
+                    "mode": 1,
+                    "x": 150,
+                    "y": 58,
+                    "width": 1028,
+                    "height": 773
+                }
+            },
+            {
+                "folderUri": {
+                    "$mid": 1,
+                    "fsPath": "/home/billy/Desktop/database",
+                    "external": "file:///home/billy/Desktop/database",
+                    "path": "/home/billy/Desktop/database",
+                    "scheme": "file"
+                },
+                "backupPath": "/home/billy/Desktop/assessment3/~/.vscode-root/Backups/122198317f01fea8aa929b35ed99914f",
+                "uiState": {
+                    "mode": 1,
+                    "x": 225,
+                    "y": 53,
+                    "width": 1028,
+                    "height": 772
+                }
+            }
+        ],
+        "lastActiveWindow": {
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/home/billy/Desktop/database",
+                "external": "file:///home/billy/Desktop/database",
+                "path": "/home/billy/Desktop/database",
+                "scheme": "file"
+            },
+            "backupPath": "/home/billy/Desktop/assessment3/~/.vscode-root/Backups/122198317f01fea8aa929b35ed99914f",
+            "uiState": {
+                "mode": 1,
+                "x": 225,
+                "y": 53,
+                "width": 1028,
+                "height": 772
+            }
+        }
     }
 }

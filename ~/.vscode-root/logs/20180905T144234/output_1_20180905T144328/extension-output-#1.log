@@ -1,0 +1,52 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/billy/Desktop/assessment3
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/login/login.component.ts
+> git show :src/app/login/login.component.html
+> git show :src/app/login/login.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/login/login.component.ts
+> git show :src/app/login/login.component.html
+> git show :src/app/login/login.component.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse 1.0
+> git rev-parse --symbolic-full-name 1.0@{u}
+> git rev-list --left-right 1.0...refs/remotes/origin/1.0
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/login/login.component.html
+> git show :src/app/login/login.component.ts
