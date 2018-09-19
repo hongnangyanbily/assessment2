@@ -1,7 +1,7 @@
 {
   "name": "simpledb",
   "version": "1.0.0",
-  "description": "",
+  "description": "## The develop environment ## Need to install nodejs and mongodb * npm init * npm install",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,13 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.16.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongnangyanbily/assessment3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hongnangyanbily/assessment3/issues"
+  },
+  "homepage": "https://github.com/hongnangyanbily/assessment3#readme"
 }
