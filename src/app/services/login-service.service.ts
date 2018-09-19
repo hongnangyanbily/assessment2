@@ -29,4 +29,7 @@ export class LoginServiceService {
       localStorage.getItem("loggedIn") || this.loggedIn.toString()
     );
   }
+  status() {
+    return this.loginStatus;
+  }
 }

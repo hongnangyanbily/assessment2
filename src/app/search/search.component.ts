@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { GROUPS } from "./../mock-groups";
 import { Group } from "./../group";
+import { LoginServiceService } from "../services/login-service.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-search",
@@ -11,10 +13,16 @@ export class SearchComponent implements OnInit {
   Groups: Group[];
   resultOfGroups: Group[];
   searched: boolean;
-  constructor() {
+  loginStatus: boolean;
+  constructor(private http: LoginServiceService, private route: Router) {
     //initialising....
     this.Groups = GROUPS;
     this.searched = false;
+    if (http.isLoggedIn) {
+      this.loginStatus = true;
+    } else {
+      this.loginStatus = false;
+    }
   }
 
   ngOnInit() {}
@@ -57,5 +65,10 @@ export class SearchComponent implements OnInit {
     if (this.searched == false) {
       window.alert("Not found!");
     }
+  }
+  logout() {
+    this.http.loggedIn(false);
+    this.route.navigate(["/"]);
+    document.getElementById("out").style.visibility = "hidden";
   }
 }

@@ -10,9 +10,5 @@ import { Router, Route } from "@angular/router";
 export class AppComponent {
   title = "FindYourGrp";
   constructor(private http: LoginServiceService, private route: Router) {}
-  logout() {
-    this.http.loggedIn(false);
-    this.route.navigate(["/"]);
-    document.getElementById("out").style.visibility = "hidden";
-  }
+  
 }

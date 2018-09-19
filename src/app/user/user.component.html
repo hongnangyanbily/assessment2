@@ -1,8 +1,8 @@
 <div *ngIf="loginStatus">
   <br>
   <br>
+  <p style="text-align: right" *ngIf="loginStatus" id="out"><button (click)="logout()">logout</button></p>
   <form style="text-align:center">
-    <p style="text-align: right" *ngIf="loginStatus" id="out"><button (click)="logout()">logout</button></p>
     <label>First name: </label>
     <input name="firstName" [(ngModel)]="user.firstName" placeholder="First Name">
 

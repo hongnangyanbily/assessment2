@@ -1,8 +1,14 @@
-<h2>My Groups</h2>
-<ul class="groups">
-  <li *ngFor="let group of groups" [class.selected]="group === selectedGroup" (click)="onSelect(group)">
-    {{group.id}}.{{group.name}}<br/>
-    Owner:{{group.owner}}<br/>
-  </li>
-</ul>
-<app-group-detail [group]="selectedGroup"></app-group-detail>
+<p style="text-align: right" *ngIf="loginStatus" id="out"><button (click)="logout()">logout</button></p>
+<div *ngIf="loginStatus">
+  <h2>My Groups</h2>
+  <ul class="groups">
+    <li *ngFor="let group of groups" [class.selected]="group === selectedGroup" (click)="onSelect(group)">
+      {{group.id}}.{{group.name}}<br/> Owner:{{group.owner}}
+      <br/>
+    </li>
+  </ul>
+  <app-group-detail [group]="selectedGroup"></app-group-detail>
+</div>
+<div *ngIf="!loginStatus">
+  <p>Sorry you have to <a href="/">login</a> first!</p>
+</div>
