@@ -9,11 +9,24 @@ import "rxjs/add/observable/throw";
 })
 export class LoginServiceService {
   url = "http://localhost:3000";
+
+  private loginStatus = JSON.parse(localStorage.getItem("loggedIn") || "false");
+
   constructor(private http: HttpClient) {}
+
   usrLogin(user) {
     return this.http.post(`${this.url}/loginUser`, user).catch(this.errHandle);
   }
   errHandle(error: HttpErrorResponse) {
     return Observable.throw(error.message || "Please check your input");
+  }
+  loggedIn(value: boolean) {
+    this.loginStatus = value;
+    localStorage.setItem("loggedIn", this.loginStatus.toString());
+  }
+  get isLoggedIn() {
+    return JSON.parse(
+      localStorage.getItem("loggedIn") || this.loggedIn.toString()
+    );
   }
 }

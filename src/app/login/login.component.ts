@@ -10,11 +10,17 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   user: user;
   erroMsg;
+  loginStatus: boolean;
   constructor(private login: LoginServiceService, private route: Router) {
     this.user = {
       username: "",
       password: ""
     };
+    if (login.isLoggedIn) {
+      this.loginStatus = true;
+    } else {
+      this.loginStatus = false;
+    }
   }
   ngOnInit() {}
 
@@ -27,18 +33,17 @@ export class LoginComponent implements OnInit {
       data => {
         if (data != null) {
           console.log("successfully!");
+          console.log(data);
           this.route.navigate(["user"]);
-        } else if (data == null) {
-          window.alert("username or password wrong");
-        } else {
-          window.alert("Please complete the form");
         }
       },
       error => {
         this.erroMsg = error;
+        console.log(error);
         window.alert("please input correct username or password!!");
       }
     );
+    this.login.loggedIn(true);
   }
 }
 interface user {
