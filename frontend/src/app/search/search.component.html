@@ -1,0 +1,23 @@
+<br>
+<br>
+<form style="text-align: center" (submit)="findGroup(input.value)">
+  <input type="text" placeholder="Enter group keyword" #input/>
+</form>
+<h1>Result:</h1>
+<ul style="text-align:center" *ngIf="searched">
+  <li *ngFor="let group of resultOfGroups">
+    {{group.id}}.{{group.name}}
+    <br/> Size: {{group.size}}
+    <br/> Description: {{group.description}}
+    <br/> Locations: {{group.location}}
+    <br/> Owner: {{group.owner}}
+    <br/>
+    <br/>
+
+  </li>
+
+</ul>
+<br>
+<br>
+
+<!-- button onclick: link to database and retrieve a list of group  -->

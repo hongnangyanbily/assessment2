@@ -1,0 +1,41 @@
+<div>
+  <br>
+  <mat-card>
+    <section class="mat-typegraphy">
+      <h3>Create A New Group</h3>
+    </section>
+    <mat-divider>
+    </mat-divider>
+    <br>
+    <form [formGroup]="addForm" class="add-form">
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Group Title" formControlName="title" #title>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <textarea matInput placeholder="Description" formControlName="description" #description></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="category" formControlName="category" #category>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <mat-select placeholder="Status" formControlName="status" #status>
+          <mat-option value="Full">Full</mat-option>
+          <mat-option value="Available">Available</mat-option>
+          <mat-option value="Pending">Pending</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+
+      <mat-divider>
+      </mat-divider>
+      <br>
+      <button mat-raised-button color="accent" routerLink="/grpList">Back</button>
+      <button type="submit" (click)="addGroup(title.value, description.value, category.value, status.value)" [disabled]="addForm.pristine || addForm.invalid"
+        mat-raised-button color="primary">Save</button>
+    </form>
+  </mat-card>
+</div>
