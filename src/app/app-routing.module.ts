@@ -5,9 +5,11 @@ import { GroupsComponent } from "./groups/groups.component";
 import { UserComponent } from "./user/user.component";
 import { SearchComponent } from "./search/search.component";
 import { GroupBoardComponent } from "./group-board/group-board.component";
+import { GrpListComponent } from "./grp-list/grp-list.component";
+import { AddGrpComponent } from "./add-grp/add-grp.component";
+import { EditGrpComponent } from "./edit-grp/edit-grp.component";
 
 const routes: Routes = [
-
   { path: "", redirectTo: "groups", pathMatch: "full" }, // default route
 
   {
@@ -26,6 +28,18 @@ const routes: Routes = [
   {
     path: "groupBoard",
     component: GroupBoardComponent
+  },
+  {
+    path: "grpList",
+    component: GrpListComponent
+  },
+  {
+    path: "add",
+    component: AddGrpComponent
+  },
+  {
+    path: "edit/:id",
+    component: EditGrpComponent
   }
 ];
 
