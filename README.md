@@ -6,10 +6,12 @@
 # Intall
 
 For frontend:
+```
 ng add@angular material
-``
+```
 
 For backend:
+```
 npm install --save-dev babel-cli babel-preset-env
 ```
 npm install --save-dev babel-watch
