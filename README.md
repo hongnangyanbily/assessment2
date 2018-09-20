@@ -6,18 +6,26 @@
 # Intall
 
 For frontend:
-> ng add@angular.material
+ng add@angular material
+``
 
 For backend:
-> npm install --save-dev babel-cli babel-preset-env
-> npm install --save-dev babel-watch
-> npm intall express
-> npm install mongoose
-> npm install cors
+npm install --save-dev babel-cli babel-preset-env
+```
+npm install --save-dev babel-watch
+```
+npm intall express
+```
+npm install mongoose
+```
+npm install cors
+```
 
 For database:
-> Recommend Robo 3T as database editor
-> Mongod
+Recommend Robo 3T as database editor
+```
+Mongod
+```
 
 # Run
 1. Open mongod in termnial
