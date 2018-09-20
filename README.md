@@ -14,11 +14,15 @@ For backend:
 ```
 npm install --save-dev babel-cli babel-preset-env
 ```
+```
 npm install --save-dev babel-watch
+```
 ```
 npm intall express
 ```
+```
 npm install mongoose
+```
 ```
 npm install cors
 ```
