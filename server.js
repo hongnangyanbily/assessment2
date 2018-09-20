@@ -54,7 +54,7 @@ router.route("/groups/add").post((req, res) => {
 });
 
 // update
-router.route("/groups/update/:id").post((res, req) => {
+router.route("/groups/update/:id").post((req, res) => {
   Group.findById(req.params.id, (err, group) => {
     if (!group) return next(new Error("Could not load"));
     else {
