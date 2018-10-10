@@ -7,7 +7,7 @@
 
 For frontend:
 ```
-ng add@angular material
+ng add @angular/material
 ```
 
 For backend:
