@@ -2,15 +2,21 @@
 
 ## Set up the environment
 
-- npm init
-- npm install express --save
-- npm install mongoose --save
-- npm install body-parser --save
+- git clone to your local environment
+- `npm install` in 2 folders respectively: group->backend & user
+- `add @angular/material` in frontend 
 
-## Version Link
+## Database
+- make sure mongod has been installed locally
+- download Robo 3T
+- Run `mongod` in terminal
+- Open Robo 3T and build new connection
+- In database -> Collections, create new collection: "users" & "groups" 
+ 
+## Run
 
-| Version                                                         |        Short description         |
-| --------------------------------------------------------------- | :------------------------------: |
-| [V1.0](https://github.com/hongnangyanbily/assessment3/tree/1.0) |         The Angular mock         |
-| [V2.0](https://github.com/hongnangyanbily/assessment3/tree/2.0) | MongoDB and expressjs for Groups |
-| [V3.0](https://github.com/hongnangyanbily/assessment3/tree/2.0) |  MongoDB and expressjs for User  |
+|     Folder       |             Syntax               |       
+| ---------------- | :------------------------------: |
+| frontend         |          `ng serve`              |
+| group -> backend |          `npm run dev`           |
+| user             |          `node app.js`           |
