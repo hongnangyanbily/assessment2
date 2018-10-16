@@ -20,3 +20,5 @@
 | frontend         |          `ng serve`              |
 | group -> backend |          `npm run dev`           |
 | user             |          `node app.js`           |
+
+http://localhost:4200
