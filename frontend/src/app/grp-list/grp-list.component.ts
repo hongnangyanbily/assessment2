@@ -18,6 +18,7 @@ export class GrpListComponent implements OnInit {
     private router: Router,
     private http: LoginServiceService
   ) {
+    // Check log in status
     if (http.isLoggedIn) {
       this.loginStatus = true;
     } else {
@@ -29,6 +30,7 @@ export class GrpListComponent implements OnInit {
     this.fetchGroups();
   }
 
+  // Use call back function from group service to request data
   fetchGroups() {
     this.groupService.getGroups().subscribe((data: Group[]) => {
       this.groups = data;
@@ -36,11 +38,12 @@ export class GrpListComponent implements OnInit {
     });
   }
 
-  // Add event handlers for edit and delete
+  // Add event handlers for edit
   editGroup(id) {
     this.router.navigate([`/edit/${id}`]);
   }
 
+  // Add event handlers for edit
   deleteGroup(id) {
     this.groupService.deleteGroup(id).subscribe(() => {
       this.fetchGroups();

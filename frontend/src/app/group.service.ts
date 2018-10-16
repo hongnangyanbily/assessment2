@@ -18,6 +18,7 @@ export class GroupService {
     return this.http.get(`${this.url}/groups/${id}`);
   }
 
+  // Add group
   addGroup(title, description, category, status) {
     const group = {
       title: title,
@@ -30,6 +31,7 @@ export class GroupService {
     return this.http.post(`${this.url}/groups/add`, group);
   }
 
+  // Update group information
   updateGroup(id, title, description, category, status) {
     const group = {
       title: title,

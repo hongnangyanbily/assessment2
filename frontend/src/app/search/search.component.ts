@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { GROUPS } from "./../mock-groups";
 import { Group } from "./../grp.module";
 import { LoginServiceService } from "../services/login-service.service";
 import { Router } from "@angular/router";
@@ -20,7 +19,7 @@ export class SearchComponent implements OnInit {
     private http: LoginServiceService,
     private route: Router
   ) {
-    //initialising....
+    // Initialising....
     this.Groups = [];
     this.searched = false;
     if (http.isLoggedIn) {
@@ -32,15 +31,17 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {}
 
-  // match user input with group keyword
-  // full name has to be typed and it is case-sensitive
   findGroup(keyword) {
     var str = keyword;
     this.resultOfGroups = [];
-    //searching group by key word
+
+    // Search group by key word
     this.groupService.getGroups().subscribe(groups => {
       this.Groups = groups;
       console.log(this.Groups);
+
+      // Retrive data in existing groups
+      // Match user input with group keyword
       for (let a = 0; a < this.Groups.length; a++) {
         if (this.Groups[a].title.includes(keyword)) {
           console.log(keyword);
@@ -49,12 +50,15 @@ export class SearchComponent implements OnInit {
           console.log("Search group by title");
         }
       }
+
+      // Message for invalid message
       if (this.searched == false) {
         window.alert("Not found!");
       }
     });
-    //Set messege for no matching
   }
+
+  // Log out
   logout() {
     this.http.loggedIn(false);
     this.route.navigate(["/"]);

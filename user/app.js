@@ -7,7 +7,6 @@ const port = 3000;
 const cors = require("cors");
 var database;
 var users;
-var newUsr;
 var url = "mongodb://localhost:27017/database";
 
 var bcrypt = require("bcrypt");
@@ -16,6 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// connect with mongodb
 MongoClient.connect(
   url,
   function(err, db) {
@@ -27,8 +27,7 @@ MongoClient.connect(
   }
 );
 
-//routing part
-
+// send post request to add user (register)
 app.post("/addUser", (req, response) => {
   bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
     req.body.password = hash;
@@ -53,6 +52,7 @@ app.post("/addUser", (req, response) => {
   });
 });
 
+// check log in input
 app.post("/loginUser", (req, response) => {
   users
     .findOne({
@@ -70,7 +70,8 @@ app.post("/loginUser", (req, response) => {
       }
     });
 });
-//add a group
+
+// add a group
 app.post("/addGroup", (req, res) => {
   let newGrp = {
     title: req.body.title,

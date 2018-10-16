@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
   user: User;
   loginStatus: boolean;
   constructor(private http: LoginServiceService, private route: Router) {
-    //build raw data
+    // Build raw data
     this.user = {
       id: 101,
       firstName: sessionStorage.getItem("firstname"),
@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
   }
 }
 interface User {
-  //define a new schema
+  // Define a new schema
   id: number;
   firstName: string;
   lastName: string;

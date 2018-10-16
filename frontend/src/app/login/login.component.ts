@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
       age: "",
       group: ""
     };
+
+    // Check log in status
     if (login.isLoggedIn) {
       this.loginStatus = true;
     } else {
@@ -40,6 +42,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit() {}
 
+  // Confirm log in
   log(event) {
     event.preventDefault();
     const target = event.target;
@@ -47,8 +50,8 @@ export class LoginComponent implements OnInit {
     this.user.password = target.querySelector("#password").value;
     this.login.usrLogin(this.user).subscribe(
       data => {
+        // Pass user information
         if (data != null) {
-          console.log("successfully!");
           this.currentUsr = data;
           sessionStorage.setItem("firstname", this.currentUsr.firstname);
           sessionStorage.setItem("lastname", this.currentUsr.lastname);
@@ -57,6 +60,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("group", this.currentUsr.group);
           this.route.navigate(["user"]);
         } else {
+          // Remind for invalid user login
           window.alert(
             "User doe not exsit! Please click 'Register' to create accout"
           );
@@ -74,6 +78,8 @@ export class LoginComponent implements OnInit {
     this.route.navigate(["register"]);
   }
 }
+
+// module of user
 interface user {
   username: string;
   password: string;

@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 import { UserComponent } from "./user/user.component";
 import { SearchComponent } from "./search/search.component";
-import { GroupBoardComponent } from "./group-board/group-board.component";
 import { LoginComponent } from "./login/login.component";
 import { GrpListComponent } from "./grp-list/grp-list.component";
 import { AddGrpComponent } from "./add-grp/add-grp.component";
@@ -30,10 +29,6 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: "groupBoard",
-    component: GroupBoardComponent
-  },
-  {
     path: "grpList",
     component: GrpListComponent
   },
@@ -49,8 +44,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(routes)],
-  // configure the router at the application's root level
 
+  // configure the router at the application's root level
   exports: [RouterModule],
   declarations: []
 })

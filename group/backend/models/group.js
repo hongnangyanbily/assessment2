@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// build module of group
+// Build module of group
 const Schema = mongoose.Schema;
 
 let Group = new Schema({

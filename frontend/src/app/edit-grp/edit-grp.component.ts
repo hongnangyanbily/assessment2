@@ -3,7 +3,6 @@ import { GroupService } from "../group.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
-import { Group } from "../grp.module";
 
 @Component({
   selector: "app-edit-grp",
@@ -25,6 +24,7 @@ export class EditGrpComponent implements OnInit {
     this.addForm();
   }
 
+  // Update group information
   addForm() {
     this.updatedForm = this.fb.group({
       title: ["", Validators.required],
@@ -36,6 +36,7 @@ export class EditGrpComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      // Update object group's attribute value and send to backend
       this.id = params.id;
       this.groupService.getGroupById(this.id).subscribe(res => {
         this.group = res;
@@ -49,8 +50,6 @@ export class EditGrpComponent implements OnInit {
 
   // Event handler for update detail of group
   updateGroup(title, description, category, status) {
-    console.log("clicked");
-
     // Use snackbar to inform user
     this.groupService
       .updateGroup(this.id, title, description, category, status)

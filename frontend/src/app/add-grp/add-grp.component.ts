@@ -24,8 +24,9 @@ export class AddGrpComponent implements OnInit {
     });
   }
 
-  // Define add group
+  // Add group to backend via service
   addGroup(title, description, category, status) {
+    
     // Call from group service add method and navigate back to list
     this.groupService
       .addGroup(title, description, category, status)

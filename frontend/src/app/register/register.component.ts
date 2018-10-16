@@ -33,6 +33,8 @@ export class RegisterComponent implements OnInit {
     };
     this.erroMsg = "";
   }
+
+  // Register as a user
   register(event) {
     event.preventDefault();
     const target = event.target;
@@ -54,7 +56,7 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(["user"]);
           this.http.loggedIn(true);
         } else {
-          window.alert("user already exsits");
+          window.alert("User already exsits");
         }
       },
       error => {
@@ -65,6 +67,8 @@ export class RegisterComponent implements OnInit {
     );
   }
 }
+
+// module of user
 interface user {
   username: string;
   password: string;

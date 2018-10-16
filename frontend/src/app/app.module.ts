@@ -4,13 +4,11 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from "@angular/http";
 import { ReactiveFormsModule } from "@angular/forms";
-
 import { AppComponent } from "./app.component";
 import { RegisterComponent } from "./register/register.component";
 import { UserComponent } from "./user/user.component";
 import { AppRoutingModule } from ".//app-routing.module";
 import { SearchComponent } from "./search/search.component";
-import { GroupBoardComponent } from "./group-board/group-board.component";
 import { LoginComponent } from "./login/login.component";
 import { AddGrpComponent } from "./add-grp/add-grp.component";
 import { EditGrpComponent } from "./edit-grp/edit-grp.component";
@@ -36,7 +34,6 @@ import { GroupService } from "./group.service";
     AppComponent,
     UserComponent,
     SearchComponent,
-    GroupBoardComponent,
     LoginComponent,
     AddGrpComponent,
     EditGrpComponent,
