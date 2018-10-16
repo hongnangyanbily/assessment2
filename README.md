@@ -4,7 +4,7 @@
 
 - git clone to your local environment
 - `npm install` in 2 folders respectively: group->backend & user
-- `add @angular/material` in frontend 
+- `ng add@angular material` in frontend 
 
 ## Database
 - make sure mongod has been installed locally
