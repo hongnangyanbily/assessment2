@@ -1,0 +1,27 @@
+<div *ngIf="loginStatus">
+  <br>
+  <br>
+  <p style="text-align: right" *ngIf="loginStatus" id="out"><button (click)="logout()">logout</button></p>
+  <form style="text-align: center" (submit)="findGroup(input.value)" *ngIf="loginStatus">
+    <input type="text" placeholder="Enter group title" #input/>
+  </form>
+  <h1>Result:</h1>
+  <ul style="text-align:center" *ngIf="searched">
+    <li *ngFor="let group of resultOfGroups">
+      <br/>Title: {{group.title}}
+      <br/> Description: {{group.description}}
+      <br/> Category: {{group.category}}
+      <br/> Status: {{group.status}}
+      <br/>
+      <br/>
+
+    </li>
+
+  </ul>
+  <br>
+  <br>
+</div>
+<div *ngIf="!loginStatus">
+  <p>Sorry you have to <a href="/">login</a> first!</p>
+</div>
+<!-- button onclick: link to database and retrieve a list of group  -->

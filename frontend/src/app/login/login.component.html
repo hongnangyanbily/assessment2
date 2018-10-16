@@ -1,0 +1,9 @@
+<form style="text-align: center" (submit)="log($event)">
+  <label>Username:</label>
+  <input type="text" placeholder="Username" name="username" required id="username" autocomplete="username"><br/>
+  <label>Password:</label>
+  <input type="password" placeholder="Password" name="username" required id="password" autocomplete="current-password"><br/>
+  <input type="submit" value="Login"> &nbsp;
+  <button (click)="register()">Register</button>
+  <p>{{errorMsg}}</p>
+</form>
