@@ -1,4 +1,4 @@
-Name | ID|  Github Name|
+Name | Student ID|  Github Name|
 ------------ | -------------| -------------|
 Hongnan Yan | 12190284| hongnangyanbily|
 Shifeng Li | 99179766|  Josh119891|
